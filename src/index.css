@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family:
@@ -24,4 +28,15 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
+  font-size: large;
+}
+
+.group-5 button:nth-child(3){
+  width: 100px;
 }
