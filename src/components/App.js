@@ -5,7 +5,7 @@ import Display from './Display';
 function App() {
   return (
     <React.Fragment key="key">
-      <Display name="Dispaly" />
+      <Display />
       <ButtonPanel name="Button" />
     </React.Fragment>
   );
