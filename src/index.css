@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
 }
 
@@ -37,6 +37,6 @@ button {
   font-size: large;
 }
 
-.group-5 button:nth-child(3){
+.group-5 button:nth-child(3) {
   width: 100px;
 }
