@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function App() {
-    return(
-      <div>
-        <h1>Calculator</h1>
-      </div>
-    )
+  return (
+    <div>
+      <h1>Calculator</h1>
+    </div>
+  );
 }
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
