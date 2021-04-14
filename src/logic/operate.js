@@ -30,7 +30,3 @@ function operate(numberOne, numberTwo, operation) {
 }
 
 export default operate;
-
-console.log(operate(3, 5, '+'));
-console.log(operate(0.3, 0.1, '-'));
-console.log(operate(355, 0, '÷'));
