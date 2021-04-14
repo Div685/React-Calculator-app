@@ -1,14 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-function App() {
-  return (
-    <div>
-      <h1>Calculator</h1>
-    </div>
-  );
-}
+import App from './components/App';
 
 ReactDOM.render(
   <React.StrictMode>
