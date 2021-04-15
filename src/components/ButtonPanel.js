@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class ButtonPanel extends Component {
   render() {
+    const { clickHandler } = this.props;
+    // console.log('button Panel:', clickHandler);
     return (
       <div className="main-div">
         <div className="group-1">
-          <Button name="AC" />
-          <Button name="+/-" />
+          <Button name="AC" clickHandler={clickHandler} />
+          <Button name="+/-" clickHandler={clickHandler} />
           <Button name="%" />
           <Button name="÷" />
         </div>
@@ -39,3 +42,7 @@ export default class ButtonPanel extends Component {
     );
   }
 }
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
