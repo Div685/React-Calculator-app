@@ -3,7 +3,7 @@ import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import calculate from '../logic/calculate';
 
-export class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
