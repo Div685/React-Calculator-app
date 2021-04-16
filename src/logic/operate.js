@@ -9,24 +9,33 @@ const divide = (a, b) => (`${b}` === '0' ? 'INFINITY' : a.div(b).valueOf());
 const multiply = (a, b) => a.times(b).valueOf();
 
 function operate(numberOne, numberTwo, operation) {
-  const num1 = new Big(numberOne);
-  const num2 = new Big(numberTwo);
+  const num1 = typeof numberOne !== 'number' ? Big(Number(numberOne)) : Big(numberOne);
+  const num2 = typeof numberTwo !== 'number' ? Big(Number(numberTwo)) : Big(numberTwo);
+  let result = 0;
 
   const expr = operation;
   switch (expr) {
     case '+':
-      return plus(num1, num2);
+      result = plus(num1, num2);
+      break;
     case '-':
-      return subtract(num1, num2);
-    case 'X':
-      return multiply(num1, num2);
+      result = subtract(num1, num2);
+      break;
+    case 'x':
+      result = multiply(num1, num2);
+      break;
     case '÷':
-      return divide(num1, num2);
+      result = divide(num1, num2);
+      break;
     case '%':
-      return num1.mod(num2);
+      result = num1.times((num2.div(100).toFixed(1)));
+      break;
     default:
-      return null;
+      result = 0;
+      break;
   }
+
+  return result.toString();
 }
 
 export default operate;

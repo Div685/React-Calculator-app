@@ -1,22 +1,17 @@
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Display extends React.Component {
-  render() {
-    const { result } = this.props;
-    return (
-      <div>
-        <h1>{ result }</h1>
-      </div>
-    );
-  }
-}
+const Display = ({ total, next }) => (
+  <div className="display">
+    <span>{(next && next.toString()) || (total && total.toString()) || '0'}</span>
+  </div>
+);
 
 Display.propTypes = {
-  result: PropTypes.string,
+  total: PropTypes.string,
+  next: PropTypes.string,
 };
 
-Display.defaultProps = { result: '0' };
+Display.defaultProps = { total: '', next: '' };
 
 export default Display;
