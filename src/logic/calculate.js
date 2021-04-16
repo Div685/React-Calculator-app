@@ -1,60 +1,70 @@
 import operate from './operate';
 
-const calculate = ({
-  total,
-  next,
-  operation,
-}, buttonName) => {
-  const result = {};
-  switch (buttonName) {
-    case '0':
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    case '5':
-    case '6':
-    case '7':
-    case '8':
-    case '9':
-    case '+/-':
-      if (next) {
-        result.total = parseFloat(next) * -1;
-      }
-      break;
-    case 'AC':
-      result.total = 0;
-      result.next = '';
-      result.operation = '';
-      break;
-    case '.':
-      if (next) {
-        result.next = next + buttonName;
-      } else {
-        result.next = buttonName;
-      }
-      break;
-    case '=':
-      if (operation) {
-        result.next = operate(total, parseFloat(next), operation);
-        result.operation = null;
-      } else if (next) {
-        result.next = parseFloat(next);
-        result.operation = null;
-      } else {
-        result.next = 0;
-        result.operation = null;
-      }
-      break;
-    default:
-      if (operation) {
-        result.total = operate(total, parseFloat(next), operation);
-      } else {
-        result.total = parseFloat(next);
-      }
-      result.next = '0';
-      result.operation = buttonName;
+const calculate = (data, buttonName) => {
+  const newData = { ...data };
+  let { total, next, operation } = newData;
+
+  if (buttonName === 'AC') {
+    total = '';
+    next = '';
+    operation = null;
+  } else if (buttonName === '÷' || buttonName === '-' || buttonName === '+' || buttonName === 'x') {
+    operation = !next ? buttonName : null;
+  } else if (buttonName === '%') {
+    if (next) {
+      next = (next / 100).toString();
+    } else {
+      total = (total / 100).toString();
+    }
+  } else if (buttonName === '+/-') {
+    if (next) {
+      next = (next * -1).toString();
+    } else if (total) {
+      total = (total * -1).toString();
+    }
+  } else if (buttonName === '=') {
+    if (total && next && operation) {
+      total = operate(total, next, operation);
+      next = '';
+      operation = null;
+    }
+  } else if (!operation) {
+    total += buttonName;
+  } else {
+    next += buttonName;
   }
+
+  return { total, next, operation };
+
+  // if (btnName === 'AC') {
+  //   newData.total = '';
+  //   newData.next = '';
+  //   newData.operation = null;
+  // } else if (btnName === '+/-') {
+  //   if (newData.next) {
+  //     newData.next = (newData.next * -1).toString();
+  //   } else if (newData.total) {
+  //     newData.total = (newData.total * -1).toString();
+  //   }
+  // } else if (btnName === '÷' || btnName === '-' || btnName === '+' || btnName === 'X') {
+  //   newData.operation = !newData.next ? btnName : null;
+  // } else if (btnName === '%') {
+  //   if (newData.next) {
+  //     newData.next = (newData.next / 100).toString();
+  //   } else {
+  //     newData.total = (newData.total / 100).toString();
+  //   }
+  // } else if (btnName === '=') {
+  //   newData.total = operate(newData.total, newData.next, newData.operation);
+  //   newData.next = '';
+  //   newData.operation = null;
+  // } else if (!newData.operation) {
+  //   newData.total += btnName;
+  // } else {
+  //   newData.next += btnName;
+  // }
+
+  // return newData;
 };
 
 export default calculate;
