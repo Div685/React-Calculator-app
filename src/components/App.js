@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 // import calculate from '../logic/calculate';
 
-const App = () => (
+const App = () => {
+  const [newState, setNewState] = useState(null);
+
+
   <div className="main-calc">
     <Display />
     <ButtonPanel />
   </div>
-);
+};
 
 // class App extends React.Component {
 //   constructor(props) {
