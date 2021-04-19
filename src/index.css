@@ -51,7 +51,7 @@ button:nth-child(4) {
   margin-right: 0;
 }
 
-.group-5 button:nth-child(3) {
+.group-row button:nth-child(1) {
   width: 110px;
   height: 50px;
   border-radius: 25px !important;

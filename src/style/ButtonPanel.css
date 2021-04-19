@@ -1,4 +1,9 @@
 .main-div {
   margin: 10px;
   display: flex;
+  flex-direction: column;
+}
+
+.group-row {
+  height:  100px;
 }
