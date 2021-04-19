@@ -1,0 +1,8 @@
+.display {
+  height: 75px;
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-break: break-word;
+}
