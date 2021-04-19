@@ -24,7 +24,11 @@ const calculate = (data, buttonName) => {
     }
   } else if (buttonName === '=') {
     if (total && next && operation) {
-      total = operate(total, next, operation);
+      try {
+        total = operate(total, next, operation);
+      } catch (e) {
+        total = 'Not Supported!';
+      }
       next = '';
       operation = null;
     }
