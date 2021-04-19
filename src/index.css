@@ -33,31 +33,6 @@ code {
     monospace;
 }
 
-button {
-  width: 50px;
-  height: 50px;
-  font-weight: 700;
-  font-size: large;
-  border-radius: 50% !important;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
-  background: #211f1f;
-  color: #fff;
-}
-
-button:nth-child(4) {
-  margin-right: 0;
-}
-
-.group-row button:nth-child(1) {
-  width: 110px;
-  height: 50px;
-  border-radius: 25px !important;
-  margin-right: 0;
-}
-
 span {
   margin: 0 10px 0 0;
 }

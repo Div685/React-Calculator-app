@@ -1,0 +1,14 @@
+button {
+  width: 25%;
+  height: 100px;
+  font-weight: 700;
+  font-size: 30px;
+  outline: none;
+  background: #fef;
+  color: #000;
+  border: 1px solid #afa0a0
+}
+
+.group-row:nth-child(5) button:nth-child(1) {
+  width: 50%;
+}
