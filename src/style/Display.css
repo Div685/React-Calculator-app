@@ -1,8 +1,12 @@
 .display {
-  height: 75px;
-  font-size: 30px;
   display: flex;
+  background: #3a3636;
+  height: 100px;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px;
+  font-size: 40px;
   justify-content: flex-end;
-  align-items: flex-end;
-  word-break: break-word;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
 }
