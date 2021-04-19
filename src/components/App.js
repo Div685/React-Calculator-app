@@ -11,18 +11,16 @@ const App = () => {
     operation: null,
   });
 
-  // const [total, setTotal] = useState('');
-  // const [next, setNext] = useState('');
-  // const [operation, setOperation] = useState(null);
-
   const handleClick = (buttonName) => {
     const newStatee = calculate(newState, buttonName);
     setNewState({ ...newStatee });
   };
 
+  const { total, next } = newState;
+
   return (
     <div className="main-calc">
-      <Display total={newState.total} next={newState.next} />
+      <Display total={total} next={next} />
       <ButtonPanel clickHandler={handleClick} />
     </div>
   );
