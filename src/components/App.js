@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
@@ -25,33 +24,5 @@ const App = () => {
     </div>
   );
 };
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       total: '',
-//       next: '',
-//       operation: null,
-//     };
-
-//     this.handleClick = this.handleClick.bind(this);
-//   }
-
-//   handleClick(buttonName) {
-//     const newState = calculate(this.state, buttonName);
-//     this.setState(() => ({ ...newState }));
-//   }
-
-//   render() {
-//     const { total, next } = this.state;
-//     return (
-//       <div className="main-calc">
-//         <Display total={total} next={next} />
-//         <ButtonPanel clickHandler={this.handleClick} />
-//       </div>
-//     );
-//   }
-// }
 
 export default App;
