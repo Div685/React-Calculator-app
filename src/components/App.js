@@ -1,16 +1,31 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
-// import calculate from '../logic/calculate';
+import calculate from '../logic/calculate';
 
 const App = () => {
-  const [newState, setNewState] = useState(null);
+  const [newState, setNewState] = useState({
+    total: '',
+    next: '',
+    operation: null,
+  });
 
+  // const [total, setTotal] = useState('');
+  // const [next, setNext] = useState('');
+  // const [operation, setOperation] = useState(null);
 
-  <div className="main-calc">
-    <Display />
-    <ButtonPanel />
-  </div>
+  const handleClick = (buttonName) => {
+    const newStatee = calculate(newState, buttonName);
+    setNewState({ ...newStatee });
+  };
+
+  return (
+    <div className="main-calc">
+      <Display total={newState.total} next={newState.next} />
+      <ButtonPanel clickHandler={handleClick} />
+    </div>
+  );
 };
 
 // class App extends React.Component {
