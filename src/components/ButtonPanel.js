@@ -4,10 +4,35 @@ import Button from './Button';
 import '../style/ButtonPanel.css';
 
 function ButtonPanel({ clickHandler }) {
-  // const orangeButton = ['÷', 'x', '-', '+', '='];
+  const buttonNames = [
+    ['AC', '+/-', '%', '÷'],
+    ['7', '8', '9', 'x'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
+  const orangeButtons = ['÷', 'x', '-', '+', '='];
+  const wideButton = '0';
+  let buttonKey = 0;
+  let groupKey = 0;
   return (
     <div className="main-div">
-      <div className="group-row">
+      {
+        buttonNames.map((group) => {
+          groupKey += 1;
+          return (
+            <div className="group-row" key={groupKey}>
+              {group.map((name) => {
+                buttonKey += 1;
+                return (
+                  <Button key={buttonKey} name={name} clickHandler={clickHandler} color={orangeButtons.includes(name) ? '#F5913E' : null} wide={wideButton === name} />
+                );
+              })}
+            </div>
+          );
+        })
+    }
+      {/* <div className="group-row">
         <Button clickHandler={clickHandler} name="AC" />
         <Button name="+/-" clickHandler={clickHandler} />
         <Button name="%" clickHandler={clickHandler} />
@@ -35,7 +60,7 @@ function ButtonPanel({ clickHandler }) {
         <Button name="0" clickHandler={clickHandler} wide />
         <Button name="." clickHandler={clickHandler} />
         <Button name="=" clickHandler={clickHandler} color="#F5913E" />
-      </div>
+      </div> */}
     </div>
   );
 }
