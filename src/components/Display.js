@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../style/Display.css';
 
 const Display = ({ total, next }) => (
   <div className="display">

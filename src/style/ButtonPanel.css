@@ -1,0 +1,8 @@
+.main-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-row {
+  height: 100px;
+}

@@ -1,0 +1,11 @@
+.quote {
+  padding: 14rem 8rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.quote h1 {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}
