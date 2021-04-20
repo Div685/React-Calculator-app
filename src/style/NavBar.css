@@ -11,24 +11,29 @@ nav {
 
 .title a {
   color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: math;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .navLink {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
+  width: 25%;
+  margin: 0 40px 0 0;
 }
-
 
 .navLink a {
   margin: 0 10px 0 0;
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: math;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navLink a:hover {
+  color: #fff;
 }
