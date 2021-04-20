@@ -1,8 +1,9 @@
 import React from 'react';
+import '../style/Quote.css';
 
 function Quote() {
   return (
-    <div>
+    <div className="quote">
       <h1>
         Mathematics is not about numbers, equations, computations, or
         algorithms: it is about understanding. –William Paul Thurston
