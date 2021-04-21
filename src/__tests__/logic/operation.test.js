@@ -16,5 +16,4 @@ describe('Operations', () => {
   it('checks for subtraction operator', () => {
     expect(operate('2', '1', '÷')).toBe('2');
   });
-
 });
