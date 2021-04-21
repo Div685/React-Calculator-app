@@ -1,0 +1,8 @@
+.main-calculator {
+  display: flex;
+}
+
+.main-calculator h1 {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 25px auto;
+}
