@@ -9,11 +9,13 @@ function Routes() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/calculator" component={Calculator} />
-        <Route exact path="/quote" component={Quote} />
-      </Switch>
+      <div data-testid="page-wrapper">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/calculator" component={Calculator} />
+          <Route exact path="/quote" component={Quote} />
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }
