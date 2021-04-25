@@ -1,4 +1,4 @@
-![example workflow](https://github.com/Div685/React-Calculator-app/actions/workflows/linters.yml/badge.svg)
+![Linters workflow](https://github.com/Div685/React-Calculator-app/actions/workflows/linters.yml/badge.svg)
 # Calculator 
 
 > Calculator web-app built using ReactJS. The main goal for this project was to build a calculator app with a very basic function of calculations like Addition, Subtraction, Multiplication, Division, and Percentage Calculation for Math-magicians Inc. This project requires to use of class-based components and proper use of props and state management.
